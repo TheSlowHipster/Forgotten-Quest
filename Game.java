@@ -1,11 +1,11 @@
 /*
-TITLE : <INSERT TITLE HERE>
+TITLE : FORGOTTEN QUEST
 
 AUTHOR : GARNET DROPPO
 
-DATE : 6/8/18
+DATE : 8/15/18
 
-VERSION 0.00.01
+VERSION 0.01.1
 */
 
 import java.io.*;
@@ -359,20 +359,22 @@ public class Game {
         //woodA's definition
         woodA.description = new String[]
             {
-                "",
-                "A",
-                ""
+                "There is a clearing in the woods to your west.",
+                "To your east there is a path that leads to more woods after jogging north.",
+                "To the south there is a path that seems quite windy."
             };
         woodA.addEast(woodA,woodB);
         woodA.addWest(woodA,clearing);
         woodA.addSouth(woodA,woodE);
         woodA.name = "woodA";
+
         //woodB's definition
         woodB.description = new String[]
         {
-            "",
-            "B",
-            ""
+            "To you north is more woods.",
+            "To the east is more woods.",
+            "To the west is more woods.",
+            "To the south is a path that jogs west."
         };
         woodB.addSouth(woodB,woodA);
         woodB.addNorth(woodB,woodF);
@@ -383,9 +385,9 @@ public class Game {
         //woodC's definition
         woodC.description = new String[] 
         {
-            "",
-            "C",
-            ""
+            "To your east is a clearing in the woods.",
+            "To your west is more woods.",
+            "To your north there is a winding path."
         };
         woodC.addNorth(woodC,woodD);
         woodC.addEast(woodC,clearing);
@@ -395,9 +397,9 @@ public class Game {
         //woodD's definition
         woodD.description = new String[]
             {
-                "",
-                "D",
-                ""
+                "To your north is a winding path.",
+                "There is a clearing in the woods to you south.",
+                "To your east is more woods."
             };
         woodD.addNorth(woodD,woodC);
         woodD.addSouth(woodD,clearing);
@@ -407,9 +409,9 @@ public class Game {
         //woodE's definition
         woodE.description = new String[]
             {
-                "",
-                "E",
-                ""
+                "You hear sweet music coming from the north.",
+                "To your east and west there are more woods.",
+                "There is a winding path to your south."
             };
         woodE.addNorth(woodE,elves);
         woodE.addEast(woodE,woodC);
@@ -420,9 +422,9 @@ public class Game {
         //woodF's defintion
         woodF.description = new String[] 
             {
-                "",
-                "F",
-                ""
+                "To your east there is a glittering in the trees.",
+                "To your south there are more woods.",
+                "There is a wolf's den to your west."
             };
         woodF.addEast(woodF,elves);
         woodF.addWest(woodF,wolfDen);
@@ -432,9 +434,12 @@ public class Game {
         //elves's definition
         elves.description = new String[] 
             {
-                "",
-                "elves",
-                ""
+                "You find yourself in a glittering city in the trees, you feel relaxed by sweet music.",
+                "It seems as though there was once a great people that once inhabeted these dwellings,",
+                "    and maybe they will return some day.",
+                "To your south the woods stretch onward.",
+                "There is a worn path to the caves in the north.",
+                "To the west there is more woods."
             };   
         elves.addSouth(elves,woodE);
         elves.addWest(elves,woodF);
@@ -443,9 +448,10 @@ public class Game {
         //wolfDen's definition
         wolfDen.description = new String[] 
             {
-                "",
-                "wolf den",
-                ""
+                "You are standing in the middle of an empty wolf den.",
+                "Perhaps someday they will return with a new batch of puppies.",
+                "To your north there is a small cave filled with mushrooms.",
+                "To your east the woods stretch on."
             };
         wolfDen.addWest(wolfDen,woodF);
         wolfDen.addNorth(wolfDen,mushroomCaves);
@@ -454,9 +460,8 @@ public class Game {
         //mushroomCaves's defintion
         mushroomCaves.description = new String[] 
             {
-                "",
-                "mushroom caves",
-                ""
+                "You find yourself in a cave filled with small mushrooms.",
+                "To your south there is the Wolf Den"
             };
         mushroomCaves.addSouth(mushroomCaves,wolfDen);
         mushroomCaves.name = "Mushroom Caves";
@@ -464,9 +469,10 @@ public class Game {
         //entryway's definition
         entryway.description = new String[] 
             {
-                "",
-                "entryway",
-                ""
+                "You find yourself in a grand entryway, with craftsmanship unparalleled.",
+                "There are intricate carvings of Dwarves on either side of the room.",
+                "There is an exit leading back to the Elven city to the south.",
+                "There are majestic iron doors to the north."
             };
         entryway.addSouth(entryway,elves);
         entryway.addNorth(entryway,grandHall);
@@ -476,9 +482,11 @@ public class Game {
         //grandHall's definition
         grandHall.description = new String[] 
             {   
-                "",
-                "grand hall",
-                ""
+                "You are now standing in the grand hall. You can tell that the dwarves who used to live here left in quite a hurry.",
+                "There is a table stretching through the center of the room that is still set.",
+                "There are doors on the western wall with soot covering the frames.",
+                "There are doors on the eastern wall that seem to lead to some sort of living quarters.",
+                "To the north there is the entrance to a kitchen made of stone."
             };
         grandHall.addSouth(grandHall,entryway);
         grandHall.addNorth(grandHall,stoneKitchen);
@@ -489,9 +497,9 @@ public class Game {
         //rooms's definition
         rooms.description = new String[] 
             {   
-                "",
-                "rooms",
-                ""
+                "You are standing in some kind of living quarters.",
+                "To your north there is a hallway that reeks of booze.",
+                "To your east there are doors to the grand hall."
             };
         rooms.addNorth(rooms,wineCellar);
         rooms.addWest(rooms,grandHall);
@@ -500,9 +508,9 @@ public class Game {
         //wineCellar's defintion
         wineCellar.description = new String[] 
             {
-                "",
-                "wine cellar",
-                ""
+                "The room stinks of booze, there are giant barrels of various alchohols scattered around the room.",
+                "To the east is a kitchen made out of stone.",
+                "To the north there is a hallway that leads back to the living quarters."
             };
         wineCellar.addNorth(wineCellar,rooms);
         wineCellar.addEast(wineCellar,stoneKitchen);
@@ -511,9 +519,9 @@ public class Game {
         //stoneKitchen's defintion
         stoneKitchen.description = new String[] 
             {
-                "",
-                "stone kitchen",
-                ""
+                "You are standing in a kitchen made of stone. There is rotten food on the counters, and a scorched area of the wall above the stove.",
+                "To the west is the wine cellar.",
+                "To the south is the grand hall."
             };
         stoneKitchen.addEast(stoneKitchen, wineCellar);
         stoneKitchen.addSouth(stoneKitchen,grandHall);
@@ -522,9 +530,9 @@ public class Game {
         //dragonRoom's definition
         dragonRoom.description = new String [] 
             {
-                "",
-                "dragon room",
-                ""
+                "OH nOES tHeRe IS a DrAGoN!!!!! is probably something I would say if there was a dragon in here.",
+                "To the North is a hallway leading back to the grand hall.",
+                "To the west is a cave system."
             };
         dragonRoom.addNorth(dragonRoom,grandHall);
         dragonRoom.addWest(dragonRoom,escape);
@@ -532,9 +540,8 @@ public class Game {
         //escape's definition
         escape.description = new String[]
             {
-                "",
-                "escape route",
-                ""
+                "You are in a system of caves.",
+                "To the east is an open room containing a Dragon."
             };
         escape.addEast(escape,dragonRoom);
         escape.name = "escape route";
@@ -670,7 +677,6 @@ class Location{
             if (i == items.length){
                 return;
             }
-            System.out.println(items[i]+" reomved");
             items[i] = null;
             if(items.length > i+1){
                 int j = i+1;
