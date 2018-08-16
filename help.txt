@@ -1,0 +1,20 @@
+
+*************HELP SCREEN***************
+
+Commands:   Description:
+North       Go North
+South       Go South
+East        Go East
+West        Go West
+
+Inven       Checks your inventory
+Quit        Exits the game
+
+**NOTE: COMMANDS AREN'T CASE SENSITIVE
+
+
+
+#### DEBUG COMMANDS
+
+CHECK : prints the name of the room player.location points to
+
