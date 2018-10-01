@@ -1,4 +1,6 @@
 
+
+
 /*
 TITLE : FORGOTTEN QUEST
 
@@ -15,11 +17,243 @@ import java.util.*;
 public class Game {
     static String commands;
     static Player player;
-    static World world;
-
+    st atic World world;
+ 
     // DiceRoll
-    static Random rand;
-
+    st atic Random rand;
+ 
     static Menu menu;
 
+    public static void main(String[] args) {
+
+        Menu.welcome();
+
+    parseCommands();if(commands=="")return;else if(commands.equals("help"))
+    {
+        strin[] help = null;
+        try {
+            help = helpReader();
+        } catch (FileNotFoundException ex) {
+            System.out.println("Help File Not found" + ex);
+            ex.printStackTrace();
+        }
+        for (String line : help) {
+            if (line != null)
+                System.out.println(line);
+        }
+    }else if(commands.toLowerCase().equals("look"))
+    {
+        System.out.println();
+        World.printRoom(player.location);
+
+    }
+    
+    
+    }
 }
+                                       
+                        
+
+                  
+
+           
+                    
+            
+            
+                
+                 
+                
+            
+                
+                 
+                
+            
+                
+                 
+                
+            
+                
+                 
+                
+            
+
+        
+
+         
+
+              
+                           
+
+            
+                
+                          
+                 
+                                                
+                
+                
+                                                
+                          
+                                                  
+                             
+
+             
+                                                  
+          
+         
+        
+        
+ 
+             
+             
+             
+             
+            
+         
+
+             
+             
+             
+             
+             
+        
+
+              
+             
+              
+             
+               
+        
+
+             
+                 
+               
+             
+            
+          
+             
+             
+                 
+                
+            
+        
+
+               
+             
+             
+             
+                        
+            
+        
+
+              
+               
+            
+        
+    
+ 
+  
+ 
+                                         
+            
+
+           
+                    
+            
+            
+                
+                 
+                
+            
+                
+                 
+                
+            
+                
+                 
+                
+            
+                
+                 
+                
+            
+
+        
+
+         
+
+              
+                           
+
+            
+                
+                          
+                 
+                                                
+                
+                
+                                                
+                          
+                                                  
+                             
+
+          
+                                                  
+          
+         
+        
+        
+
+             
+             
+             
+             
+            
+        
+
+             
+             
+             
+             
+            
+        
+
+             
+             
+             
+             
+            
+        
+
+             
+             
+             
+             
+            
+        
+
+             
+             
+             
+             
+            
+        
+
+             
+             
+             
+             
+            
+        
+
+             
+             
+             
+             
+            
+        
+    
+
+
+
+                                         
+                                

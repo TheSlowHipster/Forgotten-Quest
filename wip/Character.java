@@ -11,26 +11,23 @@ public class Character {
         this.gold = gold;
     }
 
-    public addInven (String toAdd)
-    {
-        if(inven==null)
-        {
+    public Character() {
+
+    }
+
+    public void addInven(String toAdd) {
+        if (inven == null) {
             inven = new String[5];
         }
-        for (i = 0; i < inven.length; ++i)
-        {
-            if(inven[i]==null)
-            {
+        for (int i = 0; i < inven.length; ++i) {
+            if (inven[i] == null) {
                 inven[i] = toAdd;
-            }
-            else if(i == inven.length-1)
-            {
-                temp = new String[inven.length*2];
-                for(int j = 0; j < inven.length; ++j)
-                {
+            } else if (i == inven.length - 1) {
+                String[] temp = new String[inven.length * 2];
+                for (int j = 0; j < inven.length; ++j) {
                     temp[j] = inven[j];
                 }
-                inven = temp; 
+                inven = temp;
             }
         }
     }

@@ -1,14 +1,17 @@
-import java.io.IOException;
+import java.io.*;
+import java.util.*;
 
 public class Menu {
 
-    public void welcome() {
-        System.out.println("\n\nHELLO! And welcome to FORGOTTEN QUEST!");
+    public static void welcome() {
+        System.out.println("\n\nHELLO! And welcome to FORGOTTEN QUEST! (v 0.02.0)");
         System.out.println("For a list of commands available Please type help\n");
     }
 
-    public String[] helpReader() throws FileNotFoundException {
+    public static String[] helpReader() throws FileNotFoundException {
         HelpFile text = new HelpFile();
+
+        String line = null;
 
         try {
             FileReader fileReader = new FileReader("help.txt");
